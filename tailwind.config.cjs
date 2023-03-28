@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
       },
+      maxWidth: {
+        "mobile-lg": "425px",
+      },
     },
   },
   plugins: [],
