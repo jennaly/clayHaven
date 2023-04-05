@@ -1,6 +1,7 @@
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
-import { useState } from "react";
+import About from "@/scenes/about";
+import { useState, useEffect } from "react";
 import { SelectedPage } from "./shared/types";
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
 
   const [isMenuToggled, setIsMenuToggled] = useState<Boolean>(false);
 
+  useEffect(() => {
+    setIsMenuToggled(false);
+  }, [selectedPage]);
+
   return (
     <div className="app relative mx-auto max-w-mobile-lg">
       <Navbar
@@ -18,9 +23,15 @@ function App() {
         isMenuToggled={isMenuToggled}
         setIsMenuToggled={setIsMenuToggled}
       />
-      <div className="snap-y snap-mandatory">
+      <div className="h-screen snap-y snap-mandatory overflow-scroll">
         <div className="snap-center">
           <Home
+            setSelectedPage={setSelectedPage}
+            isMenuToggled={isMenuToggled}
+          />
+        </div>
+        <div className="snap-center">
+          <About
             setSelectedPage={setSelectedPage}
             isMenuToggled={isMenuToggled}
           />

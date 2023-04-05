@@ -11,12 +11,13 @@ module.exports = {
         "text-light": "#F8F6F5",
         dark: "#2D2D2D",
         light: "#F6F6F6",
+        clay: " #eeedeb",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
       },
       maxWidth: {
-        "mobile-lg": "425px",
+        "mobile-lg": "500px",
       },
     },
   },

@@ -22,8 +22,8 @@ const Home = ({ setSelectedPage, isMenuToggled }: Props) => {
         <h1 className="mx-auto w-5/6 text-center text-3xl uppercase">
           Clay Haven Studio
         </h1>
-        <div className="flex flex-col gap-6">
-          <p className="text-medium text-lg">
+        <div className="flex flex-col">
+          <p className="my-5 w-5/6 text-lg">
             Our studio is an open space with plenty of room to create on the
             wheel or handbuild.
           </p>

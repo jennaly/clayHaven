@@ -22,18 +22,18 @@ const Navbar = ({
   return (
     <nav>
       <div
-        className={`${flexBetween} absolute top-0 z-30 w-full max-w-mobile-lg px-10 py-5 text-light`}
+        className={`${flexBetween} fixed top-0 z-30 w-full max-w-mobile-lg px-10 py-5 text-light`}
       >
         <div className={`${flexBetween} mx-auto w-full`}>
           <span>ClayHaven</span>
-          <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+          <button onClick={() => setIsMenuToggled(true)}>
             <Bars3Icon className="h-6 w-6" />
           </button>
         </div>
       </div>
       {isMenuToggled && (
         <motion.div
-          className="absolute right-0 bottom-0 z-40 h-full w-2/3 max-w-[250px] bg-dark text-light drop-shadow-xl"
+          className="fixed right-0 bottom-0 z-40 h-full w-2/3 max-w-[250px] bg-dark text-light drop-shadow-xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -45,7 +45,7 @@ const Navbar = ({
         >
           {/* CLOSE ICON */}
           <div className="flex justify-end px-12 py-5">
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+            <button onClick={() => setIsMenuToggled(false)}>
               <XMarkIcon className="h-6 w-6" />
             </button>
           </div>
@@ -56,21 +56,25 @@ const Navbar = ({
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <Link
               page="About"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <Link
               page="Our Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <Link
               page="Contact Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              setIsMenuToggled={setIsMenuToggled}
             />
           </div>
         </motion.div>
