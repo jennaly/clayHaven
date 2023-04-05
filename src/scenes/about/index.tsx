@@ -15,26 +15,26 @@ const index = ({ isMenuToggled, setSelectedPage }: Props) => {
     <div id="about" className={`${darkScreen} h-screen bg-clay`}>
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
-        className="h-full"
+        className="h-screen"
       >
         <img src={About} className="h-1/3 w-full" />
-        <div className="h-2/3 p-10">
+        <div className="flex h-2/3 flex-col p-10">
           <HText>About Clay Haven</HText>
 
-          <div className="h-full overflow-auto">
-            <p className="my-5">
+          <div className="mt-5 flex flex-col gap-5 overflow-y-auto ">
+            <p>
               Clay Haven Studio was founded in 1921 by a group of passionate
               potters who wanted to create a space where they could gather and
               share their love for pottery-making. Originally located in a small
               basement, the studio quickly grew in popularity, and it wasn't
               long before they moved to a larger space on the outskirts of town.
             </p>
-            <p className="my-5">
+            <p>
               Over the years, the studio has seen many changes, but one thing
               has remained constant – our commitment to promoting the art and
               craft of pottery-making.
             </p>
-            <p className="my-5">
+            <p>
               Today, Clay Haven continues to be a hub for pottery enthusiasts
               and artists from all over the world. We're proud to have played a
               role in the development of the art of pottery-making, and we look

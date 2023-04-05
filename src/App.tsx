@@ -3,6 +3,7 @@ import Home from "@/scenes/home";
 import About from "@/scenes/about";
 import { useState, useEffect } from "react";
 import { SelectedPage } from "./shared/types";
+import Classes from "@/scenes/classes";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -23,19 +24,18 @@ function App() {
         isMenuToggled={isMenuToggled}
         setIsMenuToggled={setIsMenuToggled}
       />
-      <div className="h-screen snap-y snap-mandatory overflow-scroll">
-        <div className="snap-center">
-          <Home
-            setSelectedPage={setSelectedPage}
-            isMenuToggled={isMenuToggled}
-          />
-        </div>
-        <div className="snap-center">
-          <About
-            setSelectedPage={setSelectedPage}
-            isMenuToggled={isMenuToggled}
-          />
-        </div>
+      <div className="scroll-smooth">
+        <Home setSelectedPage={setSelectedPage} isMenuToggled={isMenuToggled} />
+
+        <About
+          setSelectedPage={setSelectedPage}
+          isMenuToggled={isMenuToggled}
+        />
+
+        <Classes
+          setSelectedPage={setSelectedPage}
+          isMenuToggled={isMenuToggled}
+        />
       </div>
     </div>
   );
