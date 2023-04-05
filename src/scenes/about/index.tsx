@@ -2,7 +2,6 @@ import HText from "@/shared/HText";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import About from "@/assets/About.jpeg";
-import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
