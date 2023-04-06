@@ -4,6 +4,7 @@ import About from "@/scenes/about";
 import { useState, useEffect } from "react";
 import { SelectedPage } from "./shared/types";
 import Classes from "@/scenes/classes";
+import ContactUs from "@/scenes/contactUs";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -33,6 +34,11 @@ function App() {
         />
 
         <Classes
+          setSelectedPage={setSelectedPage}
+          isMenuToggled={isMenuToggled}
+        />
+
+        <ContactUs
           setSelectedPage={setSelectedPage}
           isMenuToggled={isMenuToggled}
         />

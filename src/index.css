@@ -9,5 +9,8 @@ body,
 #root,
 .app {
   font-family: "Quicksand", sans-serif;
+}
+
+.app {
   background-color: #eeedeb;
 }
