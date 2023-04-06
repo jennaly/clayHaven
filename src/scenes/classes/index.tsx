@@ -12,7 +12,7 @@ type Props = {
 const index = ({ setSelectedPage, isMenuToggled }: Props) => {
   const darkScreen = isMenuToggled ? "brightness-50" : "";
   return (
-    <div id="classes" className={`${darkScreen} h-screen bg-clay`}>
+    <div id="ourclasses" className={`${darkScreen} h-screen bg-clay`}>
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.PotteryClasses)}
         className="h-screen"
